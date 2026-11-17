@@ -1,0 +1,6 @@
+{
+  "name": "Little Genius Academy",
+  "description": "Interactive educational gaming application for children aged 3–8 featuring five learning worlds: Letter Land, Number Safari, Colour & Shape Town, Animal Explorer, and Puzzle Planet.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
