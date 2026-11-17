@@ -3,7 +3,17 @@
   "short_name": "Genius Galaxy",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#000000",
-  "orientation": "any"
+  "background_color": "#fffbeb",
+  "theme_color": "rgb(245, 162, 20)",
+  "orientation": "any",
+  "id": "com.chinecheremcharles.geniusgalaxy",
+  "description": "An interactive educational game for kids aged 3 to 8 that makes learning fun.",
+  "dir": "ltr",
+  "scope": "./",
+  "lang": "en",
+  "categories": [
+    "education",
+    "entertainment",
+    "games"
+  ]
 }
