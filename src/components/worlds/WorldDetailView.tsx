@@ -19,6 +19,12 @@ export const WorldDetailView: React.FC<WorldDetailViewProps> = ({
   onBack,
   onOpenUpgradeModal,
 }) => {
+  const [bannerError, setBannerError] = React.useState(false);
+
+  React.useEffect(() => {
+    setBannerError(false);
+  }, [world.id, world.bannerImage]);
+
   return (
     <div className="w-full h-full flex flex-col justify-between overflow-y-auto bg-amber-50/30">
       {/* Top Navigation */}
@@ -55,13 +61,18 @@ export const WorldDetailView: React.FC<WorldDetailViewProps> = ({
 
       {/* World Banner & Mascot Greeting */}
       <div className="p-4 sm:p-6 max-w-5xl mx-auto w-full flex-1 space-y-6">
-        <div className="relative rounded-3xl overflow-hidden shadow-lg border-4 border-white aspect-[21/9] sm:aspect-[24/8] max-h-56">
-          <img
-            src={world.bannerImage}
-            alt={world.name}
-            referrerPolicy="no-referrer"
-            className="w-full h-full object-cover"
-          />
+        <div
+          className="relative rounded-3xl overflow-hidden shadow-lg border-4 border-white aspect-[21/9] sm:aspect-[24/8] max-h-56"
+          style={{ backgroundColor: world.themeColor }}
+        >
+          {world.bannerImage && !bannerError && (
+            <img
+              src={world.bannerImage}
+              alt={world.name}
+              onError={() => setBannerError(true)}
+              className="w-full h-full object-cover"
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-4 sm:p-6">
             <div>
               <span className="bg-amber-400 text-amber-950 font-bold text-xs px-2.5 py-0.5 rounded-full inline-block mb-1">

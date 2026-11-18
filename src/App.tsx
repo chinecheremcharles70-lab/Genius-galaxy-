@@ -111,6 +111,7 @@ export default function App() {
 
   // Tablet frame simulator setting: 'responsive' | 'fire-hd-10' | 'fire-hd-8'
   const [tabletMode, setTabletMode] = useState<'responsive' | 'fire-hd-10' | 'fire-hd-8'>('responsive');
+  const [failedBanners, setFailedBanners] = useState<Record<string, boolean>>({});
 
   // Save to LocalStorage on progress/settings changes
   useEffect(() => {
@@ -338,7 +339,7 @@ export default function App() {
 
               {/* Title Lockup */}
               <h1 className="text-4xl sm:text-6xl font-black font-kid text-white drop-shadow-lg tracking-wide uppercase leading-none mb-2">
-                Little Genius <span className="text-amber-300">Academy</span>
+                Genius <span className="text-amber-300">Galaxy</span>
               </h1>
               <p className="text-sm sm:text-base font-bold text-amber-100 drop-shadow mb-6">
                 Play, Learn and Grow! • Explore 5 Magical Educational Worlds
@@ -423,7 +424,7 @@ export default function App() {
                 </button>
                 <div>
                   <h2 className="text-lg sm:text-xl font-bold font-kid text-slate-900 leading-none">
-                    Little Genius <span className="text-indigo-600">Academy</span>
+                    Genius <span className="text-indigo-600">Galaxy</span>
                   </h2>
                   <p className="text-[11px] text-slate-500 font-medium">Hello, {settings.childName}! Pick a learning world.</p>
                 </div>
@@ -513,13 +514,20 @@ export default function App() {
                       className="group bg-white rounded-3xl overflow-hidden border-3 border-amber-200 hover:border-amber-400 shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer flex flex-col justify-between"
                     >
                       {/* Banner Image Thumbnail */}
-                      <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-100">
-                        <img
-                          src={world.bannerImage}
-                          alt={world.name}
-                          referrerPolicy="no-referrer"
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
+                      <div
+                        className="relative aspect-[16/9] w-full overflow-hidden"
+                        style={{ backgroundColor: world.themeColor }}
+                      >
+                        {world.bannerImage && !failedBanners[world.id] && (
+                          <img
+                            src={world.bannerImage}
+                            alt={world.name}
+                            onError={() =>
+                              setFailedBanners(prev => ({ ...prev, [world.id]: true }))
+                            }
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                        )}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-3">
                           <span className="text-white font-kid text-lg font-bold drop-shadow">
                             {world.name}

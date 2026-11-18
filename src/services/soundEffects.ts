@@ -1,5 +1,5 @@
 /**
- * Web Audio API procedural sound engine & Web Speech synthesis for Little Genius Academy.
+ * Web Audio API procedural sound engine & Web Speech synthesis for Genius Galaxy.
  * 100% offline, lightweight, and child-ear friendly (no harsh high-frequencies).
  */
 

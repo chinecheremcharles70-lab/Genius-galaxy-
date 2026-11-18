@@ -1,4 +1,9 @@
 import { WorldDefinition, AchievementBadge } from '../types';
+import letterLandBanner from '../assets/images/letter_land_banner_1794255060629.jpg';
+import numberSafariBanner from '../assets/images/number_safari_banner_1794255060262.jpg';
+import colourShapeTownBanner from '../assets/images/colour_shape_town_1794255061966.jpg';
+import animalExplorerBanner from '../assets/images/animal_explorer_banner_1794255061659.jpg';
+import puzzlePlanetBanner from '../assets/images/puzzle_planet_banner_1795006925458.jpg';
 
 export const WORLDS: WorldDefinition[] = [
   {
@@ -8,7 +13,7 @@ export const WORLDS: WorldDefinition[] = [
     secondaryColor: '#E0E7FF',
     bgGradient: 'from-blue-500 via-indigo-600 to-sky-500',
     description: 'Learn the ABCs, phonics, uppercase & lowercase letters, tracing, and early spelling with fun interactive friends!',
-    bannerImage: '/src/assets/images/letter_land_banner_1794255060629.jpg',
+    bannerImage: letterLandBanner,
     mascotGreeting: "Welcome to Letter Land! I'm Barnaby the Owl. Let's explore the magical world of the alphabet together!",
     learningFocus: [
       'Alphabet Recognition (A–Z)',
@@ -71,7 +76,7 @@ export const WORLDS: WorldDefinition[] = [
     secondaryColor: '#FFEDD5',
     bgGradient: 'from-amber-500 via-orange-600 to-yellow-500',
     description: 'Journey across the sunny African savannah! Count friendly animals, solve math puzzles, and master numbers 1 to 100.',
-    bannerImage: '/src/assets/images/number_safari_banner_1794255060262.jpg',
+    bannerImage: numberSafariBanner,
     mascotGreeting: 'Hoo hoo! Grab your safari binoculars! Count with me as the giraffes and zebras march by!',
     learningFocus: [
       'Counting from 1 to 100',
@@ -134,7 +139,7 @@ export const WORLDS: WorldDefinition[] = [
     secondaryColor: '#F3E8FF',
     bgGradient: 'from-pink-500 via-purple-600 to-indigo-500',
     description: 'Explore a colourful wonderland of geometric buildings! Identify primary and secondary colours, sort objects, and create patterns.',
-    bannerImage: '/src/assets/images/colour_shape_town_1794255061966.jpg',
+    bannerImage: colourShapeTownBanner,
     mascotGreeting: "Look around Shape Town! The clock tower is a hexagon, and the cafe roof is a triangle! Let's explore together!",
     learningFocus: [
       'Primary & Secondary Colours',
@@ -197,7 +202,7 @@ export const WORLDS: WorldDefinition[] = [
     secondaryColor: '#D1FAE5',
     bgGradient: 'from-emerald-500 via-teal-600 to-cyan-600',
     description: 'Discover creatures from deep oceans to icy polar glaciers! Hear authentic animal calls and learn where animals live.',
-    bannerImage: '/src/assets/images/animal_explorer_banner_1794255061659.jpg',
+    bannerImage: animalExplorerBanner,
     mascotGreeting: 'Did you hear that roar? Animals are full of amazing secrets! Put on your explorer hat and listen closely!',
     learningFocus: [
       'Domestic vs. Wild Animals',
@@ -260,7 +265,7 @@ export const WORLDS: WorldDefinition[] = [
     secondaryColor: '#E0F2FE',
     bgGradient: 'from-blue-600 via-sky-600 to-indigo-700',
     description: 'Exercise memory and problem solving with cosmic cards, difference detectors, and odd-one-out brain teasers!',
-    bannerImage: '/src/assets/images/letter_land_banner_1794255060629.jpg', // themed fallback
+    bannerImage: puzzlePlanetBanner,
     mascotGreeting: 'Brain power boost! Solving puzzles strengthens our neural connections. You are a true Little Genius!',
     learningFocus: [
       'Working Memory & Concentration',
@@ -370,7 +375,7 @@ export const BADGES: AchievementBadge[] = [
   {
     id: 'week_streak',
     title: 'Curious Scholar',
-    description: 'Play Little Genius Academy 3 days in a row!',
+    description: 'Play Genius Galaxy 3 days in a row!',
     icon: '🏆',
     category: 'dedication',
     requirement: 'Maintain a 3-day learning streak',

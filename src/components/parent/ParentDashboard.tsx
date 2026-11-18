@@ -59,7 +59,7 @@ export const ParentDashboard: React.FC<ParentDashboardProps> = ({
             className="p-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl transition-colors cursor-pointer flex items-center gap-1.5 font-bold text-sm"
           >
             <ArrowLeft className="w-4 h-4" />
-            <span>Return to Academy</span>
+            <span>Return to Genius Galaxy</span>
           </button>
           <div>
             <h1 className="text-xl font-bold font-kid text-slate-900 leading-tight">Parent & Teacher Dashboard</h1>
@@ -383,7 +383,7 @@ export const ParentDashboard: React.FC<ParentDashboardProps> = ({
               <h3 className="text-lg font-bold font-kid text-slate-900">Child Safety & COPPA Compliance</h3>
             </div>
             <p className="text-xs text-slate-600 leading-relaxed">
-              Little Genius Academy is strictly engineered for children's privacy and safety under Amazon Child-Directed App Policies and the Children’s Online Privacy Protection Act (COPPA).
+              Genius Galaxy is strictly engineered for children's privacy and safety under Amazon Child-Directed App Policies and the Children’s Online Privacy Protection Act (COPPA).
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
@@ -437,7 +437,7 @@ export const ParentDashboard: React.FC<ParentDashboardProps> = ({
               <div className="flex justify-between items-center mb-2 pb-2 border-b border-slate-800 text-slate-400">
                 <span>AndroidManifest.xml (Fire OS Optimized)</span>
                 <button
-                  onClick={() => handleCopy(`<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.littlegenius.academy">\n  <!-- Zero sensitive permissions required for COPPA compliance -->\n  <uses-feature android:name="android.hardware.touchscreen" android:required="true" />\n  <application android:label="Little Genius Academy" android:icon="@mipmap/ic_launcher" android:isGame="true">\n    <activity android:name=".MainActivity" android:screenOrientation="sensorLandscape" android:exported="true">\n      <intent-filter>\n        <action android:name="android.intent.action.MAIN" />\n        <category android:name="android.intent.category.LAUNCHER" />\n      </intent-filter>\n    </activity>\n  </application>\n</manifest>`, 'manifest')}
+                  onClick={() => handleCopy(`<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.littlegenius.academy">\n  <!-- Zero sensitive permissions required for COPPA compliance -->\n  <uses-feature android:name="android.hardware.touchscreen" android:required="true" />\n  <application android:label="Genius Galaxy" android:icon="@mipmap/ic_launcher" android:isGame="true">\n    <activity android:name=".MainActivity" android:screenOrientation="sensorLandscape" android:exported="true">\n      <intent-filter>\n        <action android:name="android.intent.action.MAIN" />\n        <category android:name="android.intent.category.LAUNCHER" />\n      </intent-filter>\n    </activity>\n  </application>\n</manifest>`, 'manifest')}
                   className="flex items-center gap-1 text-[11px] text-amber-400 hover:text-amber-300 cursor-pointer"
                 >
                   {copiedCode === 'manifest' ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
@@ -450,7 +450,7 @@ export const ParentDashboard: React.FC<ParentDashboardProps> = ({
     <!-- Zero sensitive permissions required for COPPA compliance -->
     <uses-feature android:name="android.hardware.touchscreen" android:required="true" />
     <application
-        android:label="Little Genius Academy"
+        android:label="Genius Galaxy"
         android:icon="@mipmap/ic_launcher"
         android:isGame="true"
         android:theme="@style/Theme.LittleGenius">
@@ -471,7 +471,7 @@ export const ParentDashboard: React.FC<ParentDashboardProps> = ({
             {/* Amazon Appstore Metadata */}
             <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 text-xs space-y-2">
               <span className="font-bold text-slate-800 block">Amazon Appstore Metadata:</span>
-              <p><strong>Title:</strong> Little Genius Academy: Play, Learn and Grow!</p>
+              <p><strong>Title:</strong> Genius Galaxy: Play, Learn and Grow!</p>
               <p><strong>Category:</strong> Educational Games / Kids</p>
               <p><strong>Target Age:</strong> Ages 3–8</p>
               <p><strong>Short Description:</strong> Five magical interactive learning worlds for children: Alphabet, Numbers, Colours & Shapes, Animals, and Logic Puzzles!</p>

@@ -141,7 +141,7 @@ export const PremiumModal: React.FC<PremiumModalProps> = ({
         <div className="text-center mb-6">
           <div className="inline-flex items-center gap-1.5 bg-amber-100 text-amber-900 text-xs font-bold px-3 py-1 rounded-full mb-2">
             <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-            <span>Little Genius Academy • All-Access Pass</span>
+            <span>Genius Galaxy • All-Access Pass</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold font-kid text-slate-900">Unlock Full Learning Access</h2>
           <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-md mx-auto">

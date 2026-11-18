@@ -18,7 +18,7 @@ const ENCOURAGING_QUOTES = [
 ];
 
 export const BarnabyOwl: React.FC<BarnabyOwlProps> = ({
-  message = "Hoo hoo! Welcome to Little Genius Academy! Tap any world to start playing!",
+  message = "Hoo hoo! Welcome to Genius Galaxy! Tap any world to start playing!",
   mood = 'happy',
   size = 'md',
   interactive = true,
